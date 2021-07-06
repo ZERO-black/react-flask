@@ -14,10 +14,6 @@ CORS(app)
 def home_page():
     return "home page"
 
-@app.route('/image')
-def image_page():
-    return "image"
-
 @app.route('/uploadname', methods=('POST',))
 def uploadname():
     try:

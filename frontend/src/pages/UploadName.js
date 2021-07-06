@@ -1,9 +1,11 @@
+// 텍스트로 시도한 것. 그냥 무시해 주세요
+
 import React, { useState } from "react";
 import axios from "axios";
 const UploadName = () => {
   const [name, setName] = useState("");
   const [pageStatus, setPageStatus] = useState(0);
-  const [result, setResult] = useState("HI");
+  const [result, setResult] = useState("");
 
   const onChange = (event) => {
     setName(event.target.value);
