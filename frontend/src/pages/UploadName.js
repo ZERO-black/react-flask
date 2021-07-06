@@ -10,7 +10,6 @@ const UploadName = () => {
   };
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(name);
     if (name === "") return alert("이름을 입력하세요");
     setPageStatus(1);
     const headers = {
@@ -20,15 +19,11 @@ const UploadName = () => {
 
     let response = null;
     try {
-      //   response = await axios.get("/showname");
-      //   console.log(response.data);
       response = await axios.post(
         "/uploadname",
         { name: name, id: 0 },
         { headers }
       );
-      console.log(response.data);
-      console.log(response);
       setResult(response.data);
     } catch (error) {
       console.log(error);
